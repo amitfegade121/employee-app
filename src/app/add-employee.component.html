@@ -1,0 +1,49 @@
+<div class="container">
+  <h4 class="text-center">Add new Employee</h4>
+
+  <form (ngSubmit)="addNewEmployee()" #employeeForm="ngForm">
+    <div class="form-group">
+      <label class="form-label">Employee Id:</label>
+      <input
+        type="number"
+        name="id"
+        class="form-control"
+        required
+        [(ngModel)]="employee.employeeId"
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Employee Name:</label>
+      <input
+        type="text"
+        name="name"
+        class="form-control"
+        required
+        [(ngModel)]="employee.employeeName"
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Employee department:</label>
+      <input
+        type="text"
+        name="department"
+        class="form-control"
+        required
+        [(ngModel)]="employee.employeeDepartment"
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-label">Employee Salary:</label>
+      <input
+        type="number"
+        name="salary"
+        class="form-control"
+        required
+        [(ngModel)]="employee.employeeSalary"
+      />
+    </div>
+    <button type="submit" class="btn btn-block btn-primary">
+      Add New Employee
+    </button>
+  </form>
+</div>

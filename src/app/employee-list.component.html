@@ -1,0 +1,26 @@
+<div class="container">
+  <p style="background-color: black; color: white; font-size: 20px">
+    Employees
+  </p>
+  <div class="container">
+    <table class="table table-bordered" *ngIf="employees && employees.length">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.employeeId }}</td>
+          <td>{{ employee.employeeName }}</td>
+          <td>{{ employee.employeeDepartment }}</td>
+          <td>{{ employee.employeeSalary }}</td>
+          <td><button type="button" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
